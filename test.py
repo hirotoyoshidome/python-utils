@@ -1,3 +1,5 @@
+import random
+
 print('hello world')
 
 str = 'a'
@@ -26,3 +28,6 @@ print("for文")
 for i in range(3, 5):
     print(i)
 
+# randomのモジュールを使用してみる(モジュールのインポート)
+print("ランダムな数字を出力します")
+print(random.randint(1,10))
