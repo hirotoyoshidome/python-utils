@@ -31,3 +31,33 @@ for i in range(3, 5):
 # randomのモジュールを使用してみる(モジュールのインポート)
 print("ランダムな数字を出力します")
 print(random.randint(1,10))
+
+# 文字列、タプルはイミュータブル(不可変)、リストはミュータブル(可変)である
+# リストはいわゆる配列のことであり、タプルはイミュータブルな配列のことである
+# 変更がないものはタプルを使用した方がpythonっぽいかも(実行速度も若干早くなるっぽい)
+
+# 文字列
+moji = "moji"
+
+# リスト
+ary = ["li", "arr"]
+
+# タプル
+sample_tuple = ("li", "tup")
+
+# 参照の仕方は他と一緒
+
+# 関数
+def greeting(name):
+    print("こんにちは" + name + "さん")
+
+# return は必須
+def sum(in1, in2):
+    return in1 + in2
+
+# 関数を利用する
+greeting("yoru")
+print(sum(5, 8))
+
+# javaはnull, Rubyはnil, python はNoneを使用するみたい
+print(None)
