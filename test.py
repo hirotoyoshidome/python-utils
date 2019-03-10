@@ -1,4 +1,5 @@
 import random
+import pprint
 
 print('hello world')
 
@@ -61,3 +62,11 @@ print(sum(5, 8))
 
 # javaはnull, Rubyはnil, python はNoneを使用するみたい
 print(None)
+
+# 辞書型は参照渡しのものである(いわゆるMapのこと、RubyではHashというがPythonでは辞書というらしい)
+# setdefaultメソッドを使用するとデータがない時に初期値を設定してくれる様になる
+map = {"key": "value", 1:1}
+print(map.get("key", ""))
+
+# pprintモジュールを使用すると整形して出力してくれる(Rubyのppモジュールみたいな感じ)
+pprint.pprint(map)
