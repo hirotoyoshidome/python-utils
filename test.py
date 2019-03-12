@@ -1,5 +1,6 @@
 import random
 import pprint
+import re
 
 print('hello world')
 
@@ -70,3 +71,9 @@ print(map.get("key", ""))
 
 # pprintモジュールを使用すると整形して出力してくれる(Rubyのppモジュールみたいな感じ)
 pprint.pprint(map)
+
+# 正規表現
+tar = "I'm not teenager, I'm 21"
+regexp = re.compile(r'[0-9]{1,3}')
+res = regexp.search(tar)
+print(res.group())
