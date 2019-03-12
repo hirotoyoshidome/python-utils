@@ -77,3 +77,7 @@ tar = "I'm not teenager, I'm 21"
 regexp = re.compile(r'[0-9]{1,3}')
 res = regexp.search(tar)
 print(res.group())
+
+# 正規表現の記法はもちろん一緒
+# subメソッドで置換することもできる
+# compileメソッドの引数にreモジュールの定数を渡すことで正規表現検索に柔軟性を持たせることができる
