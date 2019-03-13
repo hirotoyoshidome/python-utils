@@ -1,6 +1,8 @@
 import random
 import pprint
 import re
+import os
+import shutil
 
 print('hello world')
 
@@ -81,3 +83,12 @@ print(res.group())
 # 正規表現の記法はもちろん一緒
 # subメソッドで置換することもできる
 # compileメソッドの引数にreモジュールの定数を渡すことで正規表現検索に柔軟性を持たせることができる
+
+# osモジュールを使用する
+# カレントディレクトリを出力する
+print(os.getcwd())
+
+# shutilモジュールを使用する(shell util)
+# カレントディレクトリのディスク使用量を出力する
+print(shutil.disk_usage('./'))
+
