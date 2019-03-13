@@ -88,6 +88,14 @@ print(res.group())
 # カレントディレクトリを出力する
 print(os.getcwd())
 
+# 階層を渡り歩いて出力する
+for name, subs, names in os.walk('../'):
+    print(name)
+    for sub in subs:
+        print(sub)
+    for of_name in names:
+        print(of_name)
+
 # shutilモジュールを使用する(shell util)
 # カレントディレクトリのディスク使用量を出力する
 print(shutil.disk_usage('./'))
