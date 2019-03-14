@@ -100,3 +100,14 @@ for name, subs, names in os.walk('../'):
 # カレントディレクトリのディスク使用量を出力する
 print(shutil.disk_usage('./'))
 
+# ファイル読み込み
+path = './read_file/sample.txt'
+print(open(path).read())
+
+# ファイル書き込み(上書き)
+open(path, "w").write('override')
+print(open(path).read())
+
+# 追記
+open(path, "a").write('add')
+print(open(path).read())
