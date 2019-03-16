@@ -3,6 +3,7 @@ import pprint
 import re
 import os
 import shutil
+import traceback
 
 print('hello world')
 
@@ -114,8 +115,9 @@ print(open(path).read())
 # バイナリデータのときはwbを指定する
 
 # 例外ハンドリング
+# tracebackモジュールを使用することでトレースを出力することができる
 try:
     raise ValueError("error")
 except ValueError as e:
     print(e)
-
+    traceback.print_exc()
