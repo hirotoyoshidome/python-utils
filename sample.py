@@ -111,3 +111,11 @@ print(open(path).read())
 # 追記
 open(path, "a").write('add')
 print(open(path).read())
+# バイナリデータのときはwbを指定する
+
+# 例外ハンドリング
+try:
+    raise ValueError("error")
+except ValueError as e:
+    print(e)
+
