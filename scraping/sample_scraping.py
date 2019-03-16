@@ -1,3 +1,4 @@
+import webbrowser
 import requests
 import bs4
 
@@ -20,3 +21,6 @@ reslist = html.select("a")
 for tag in reslist:
     print(tag.getText())
 
+# webブラウザで画面を開くだけのモジュールを使用してみる
+# 既存で開いているブラウザで開く
+webbrowser.open(url)
