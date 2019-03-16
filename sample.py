@@ -4,6 +4,7 @@ import re
 import os
 import shutil
 import traceback
+import logging
 
 print('hello world')
 
@@ -121,3 +122,8 @@ try:
 except ValueError as e:
     print(e)
     traceback.print_exc()
+
+# ログのファイル出力
+logging.basicConfig(filename = "sample.log", level = logging.DEBUG)
+logger = logging.getLogger()
+logger.debug("debug log")
