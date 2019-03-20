@@ -5,6 +5,8 @@ import os
 import shutil
 import traceback
 import logging
+import time
+import datetime
 
 print('hello world')
 
@@ -127,3 +129,9 @@ except ValueError as e:
 logging.basicConfig(filename = "sample.log", level = logging.DEBUG)
 logger = logging.getLogger()
 logger.debug("debug log")
+
+# 時間を出力する(1970年からの経過秒)
+print(time.time())
+# 現在の日付を出力する
+now = datetime.datetime.now()
+print(now)
