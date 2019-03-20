@@ -8,6 +8,7 @@ import logging
 import time
 import datetime
 import pyperclip
+import threading
 
 print('hello world')
 
@@ -146,3 +147,24 @@ print(copy_text)
 text = "sample"
 pyperclip.copy(text)
 print("クリップボードにコピーしました")
+
+# 並列処理を実行する
+
+def func1():
+    while True:
+        print("func1")
+        time.sleep(1)
+
+def func2():
+    while True:
+        print("func2")
+        time.sleep(1)
+
+# スレッドを設定する
+thread1 = threading.Thread(target=func1)
+thread2 = threading.Thread(target=func2)
+
+# スレッドをスタートする
+# 別のスレッドで実行されているため順不同で出力される
+thread1.start()
+thread2.start()
