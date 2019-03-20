@@ -7,6 +7,7 @@ import traceback
 import logging
 import time
 import datetime
+import pyperclip
 
 print('hello world')
 
@@ -135,3 +136,13 @@ print(time.time())
 # 現在の日付を出力する
 now = datetime.datetime.now()
 print(now)
+
+# pyperclipを使ってみる
+# コピーしているテキストを出力する
+copy_text = pyperclip.paste()
+print(copy_text)
+
+# クリップボードにコピーする
+text = "sample"
+pyperclip.copy(text)
+print("クリップボードにコピーしました")
