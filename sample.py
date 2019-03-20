@@ -9,6 +9,7 @@ import time
 import datetime
 import pyperclip
 import threading
+import subprocess
 
 print('hello world')
 
@@ -168,3 +169,7 @@ thread2 = threading.Thread(target=func2)
 # 別のスレッドで実行されているため順不同で出力される
 thread1.start()
 thread2.start()
+
+# サブプロセス(外部コマンド)を実行する
+# windowsで実行するときはshellオプションをつける必要があるみたい
+subprocess.run("dir", shell=True)
