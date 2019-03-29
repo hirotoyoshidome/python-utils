@@ -50,3 +50,10 @@ pip install selenium
 pip install chromedriver-binary
 ```
 ※[ダメな場合はこちらからバージョンを合わせてダウンロード](http://chromedriver.chromium.org/downloads)
+
+* scipyをインストール(難しい科学計算を扱うモジュール)
+
+```
+pip install scipy
+```
+
