@@ -91,3 +91,24 @@ print(img.shape)
 
 img_show(img)
 
+# バッチ処理として実行する場合
+# x, t, networkは同様に取得する
+
+# 1度で処理するバッチの数を設定
+batch_size = 100
+accuracy_cnt_for_batch = 0
+
+# 第三引数はステップ数を指定する
+for i in range(0, len(x), batch_size):
+    # 一回のループでbatch_size分進むためその分の値を格納する
+    x_batch = x[i:i+batch_size]
+    y_batch = predict(network, x_batch)
+    # axisオプションで最大値のインデックスを取得するとき一次元目の要素ごとに取得している
+    p = np.argmax(y_batch, axis=1)
+    # sumではTrueになっているものについての合計の数を返却する
+    accuracy_cnt_for_batch += np.sum(p == t[i:i+batch_size])
+
+# １つずつ処理した場合と同様の結果が出力される
+# 一度にバッチとして複数の値を処理した方が高速で効率がよい
+print("Accuracy_batch : " + str(float(accuracy_cnt_for_batch) / len(x)))
+
