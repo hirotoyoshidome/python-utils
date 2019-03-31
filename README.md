@@ -5,6 +5,9 @@
 
 
 ## pip
+
+※python2系と3系が共存している場合はpython -> python3, pip -> pip3とする必要があるかも
+
 * pipを最新バージョンにする
 
 ```
@@ -55,5 +58,23 @@ pip install chromedriver-binary
 
 ```
 pip install scipy
+```
+
+* numpyをインストール(リストから配列を生成して計算できるモジュール)
+
+```
+pip install numpy
+```
+
+* matplotlibをインストール(グラフを描画するモジュール)
+
+```
+pip install matplotlib
+```
+
+* PILをインストール(画像を扱うモジュール)
+
+```
+pip install Pillow
 ```
 
