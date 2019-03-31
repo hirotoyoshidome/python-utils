@@ -39,6 +39,7 @@ def get_data():
     return x_test, t_test
 
 # サンプルで重みの設定がされたpickleファイルを読み込んでネットワークの初期化をする
+# pickleはpythonで扱えるデータのことで初回にダウンロードすることで次回のアクセスのときにキャッシュみたいな感じでそこから取得できるようにするデータみたい
 def init_network():
     with open("sample_weight.pkl", "rb") as f:
         network = pickle.load(f)
