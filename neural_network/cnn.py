@@ -30,5 +30,23 @@ class Convolution:
         out = out.rehape(N, out_h, out_w, -1).transpose(0, 3, 1, 2)
         return out
 
-
+class Pooling:
+    def __init__(self, pool_h, pool_w, stride=1, pad=0):
+        self.pool_h = pool_h
+        self.pool_w = pool_w
+        self.stride = stride
+        self.pad = pad
+    def forward(self, x):
+        N, C, H, H = x.shape
+        out_h = int(1 + (H - self.pool_h) / self.stride)
+        out_w = int(1 + (W - self.pool_w) / self.stride)
+        # 最大値を取得しやすいように展開する
+        col = im2col(x, self.pool_h, self.pool_w, self.stride, self.pad)
+        col = col.reshape(-1, self.pool_h * self.pool_w)
+        # 最大値を取得する(1次元目から取得する)
+        # 行列の中からの最大値を取得するため多少の変化にはロバストである（頑健性）
+        out = np.max(col, axis=1)
+        # 出力データに合わせて整形する
+        out = out.reshape(N, out_h, out_w, C).transpose(0, 3, 1, 2)
+        return out
 
