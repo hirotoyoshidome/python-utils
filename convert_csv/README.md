@@ -6,3 +6,6 @@
 ## 使い方
 * そのまま実行してください
 * 環境はPython3系でないと動作しません
+
+https://docs.google.com/spreadsheets/d/1rqebUsyO4Oh98f0kDMTSyk4VfRF0nnUNBC0Ds5zYawY/edit#gid=0
+
